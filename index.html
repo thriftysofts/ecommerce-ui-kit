@@ -1,0 +1,318 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Template Documentation Template</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Flutter UI Kit for E-commerce(Grocery App)&rdquo; Documentation by &ldquo;Thriftysoft&rdquo; v1.1</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Flutter UI Kit for E-commerce(Grocery App)&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 06/12/2019<br>
+					Last Updated:04/04/2020<br>
+					By: Thriftysoft<br>
+					Email: <a href="mailto:admin@thriftysoft.tech">admin@thriftysoft.tech</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="https://themeforest.net/user/thriftysoft">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">Installation</a></li>
+			<li><a href="#cssFiles">Getting Started</a></li>
+			<li><a href="#javascript">How to use UI Kit</a></li>
+			<li><a href="#psdFiles">Build & Install the App</a></li>
+			<!-- <li><a href="#credits">Sources and Credits</a></li> -->
+			
+			<!-- <li><a href="#">PHP Code Explanation</a> <em class="quiet small">(If your theme uses PHP)</em></li>
+			<li><a href="#">Flash</a>  <em class="quiet small">(If your theme uses Flash)</em></li>
+			<li><a href="#">API Usage</a> <em class="quiet small">(If your theme uses an API)</em></li>
+			<li><a href="#">Any additional unique features that need an overview</a></li> -->
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>A) Installation</strong> - <a href="#toc">top</a></h3>
+		<p>It is a Flutter UI Kit for E-commerce Mobile Application, specially designed for Farm products and groceries.more than 40 screens, widgets, empty states are given with different animations like Hero Animation, fade-in, pop-up, slide, etc. you can customize it as per your requirement. Since it is written in Flutter (Dart Language), so no need to write it separately for Android and IOS. The same code will be used for both platforms. The same code is used for iOS and Android.</p>
+		<h3 id="htmlStructure"><strong>Setting Flutter Environment</strong></h3>
+		
+		<p>Follow base on the operating system on which you are installing Flutter:</p>
+		<ul>
+		<li><p>Mac OS: <a href="https://flutter.dev/docs/get-started/install/macos">https://flutter.dev/docs/get-started/install/macos</a></p></li>
+		<li><p>Window: <a href="https://flutter.dev/docs/get-started/install/windows">https://flutter.dev/docs/get-started/install/windows</a></p></li>
+		<li><p>Linux: <a href="https://flutter.dev/docs/get-started/install/linux">https://flutter.dev/docs/get-started/install/linux</a></p></li>
+		<li><p>Setup an editor: <a href="https://flutter.dev/docs/get-started/editor">https://flutter.dev/docs/get-started/editor</a></p></li>
+		</ul>
+		<!-- <p>If you would like to edit the color, font, or style of any elements in one of these columns, you would do the following:</p> -->
+
+		<hr>
+
+		<h3 id="cssFiles"><strong>B) Getting Started</strong> - <a href="#toc">top</a></h3>
+
+		<ul>
+			<li>
+				Download and unzip the package, use preferred IDE <strong>(Android Studio / Visual Code / IntelliJ)</strong> to open the project <strong><mark>ecommerce-ui-kit</mark></strong> folder</em>.
+			</li>
+			<li>
+				Click to  Get the dependencies or Packages to install the libraries from <em>pubspecs.yaml</em> file.
+			</li>
+			<li>
+				Open the simulator to run iOS or Android (as the step above)
+			</li>
+			<li>
+				Then press the run button to start project.
+			</li>
+
+		</ul>
+
+
+		<hr>
+		
+		<h3 id="javascript"><strong>C) How to use UI Kit</strong> - <a href="#toc">top</a></h3>
+		
+		<p>Read the details given below to know how you can reuse this UI kit in your own project. In the <strong><mark>ecommerce-ui-kit/lib/</mark></strong> directory you will find five subdirectories and a main.dart file.</p>
+		
+		<ol>
+			<br>
+			<h3><strong><li>Main File <em>(main.dart)</em></li></strong></h3>
+			<p>The main file contains global configuration (Title / Themes / Font Family / Colors...) of the App and initiates the initial route of the app.</p>
+<xmp style="background-color: #fff2ac; font-size: 15px;">
+//........
+MaterialApp(
+	debugShowCheckedModeBanner: false, 
+	home: Splashscreen(),
+	theme: ThemeData(        
+	primaryColor: Colors.red[500],
+	accentColor: Colors.red[500],
+	fontFamily: 'Roboto',
+	selectedRowColor: Colors.red[200],
+	primaryColorLight: Colors.red[200],      
+	),     
+	initialRoute: '/',  
+	onGenerateRoute: RouteGenerator.generateRoute,
+........//
+</xmp>
+			
+			<br>
+			<h3><strong><li>Controllers <em>(controllers)</em></li></strong></h3>
+			<p>The controller directory in  <strong><mark>ecommerce-ui-kit/lib/controllers/</mark></strong> holds controller files and subdirectories that helps a user or the ui component access the data models in an efficient and true manner.
+			<img src="assets/images/controller.png" alt="HTML Structure" />
+			
+			
+			<br>
+			<h3><strong>routes.dart</strong></h3>
+			<p>The navigation mode in E-Commerce Flutter App UI Kit is route aspect it's easy and flexible approach. It holds all the routes and the route generator class which helps in routing the app through screens, models, provider, controllers etc.</p>
+			<strong>Example:</strong>
+<xmp style="background-color: #fff2ac; font-size: 15px;">
+//.....
+class RouteGenerator {
+static Route<dynamic> generateRoute(RouteSettings settings) {
+   // Getting arguments passed in while calling Navigator.pushNamed
+final args = settings.arguments;
+
+    switch (settings.name) {
+      case '/':
+        	return MaterialPageRoute(
+          	builder: (_) => MyApp(),
+        	);
+      case '/cart':
+        	// Validation of correct data type
+        	return MaterialPageRoute(
+          	builder: (_) => Cart_main(
+            cart_item_len: args,
+          ),
+        );
+      case '/login':
+        	return MaterialPageRoute(
+          	builder: (_) => Login(),
+        	);
+.....//
+</xmp>		
+			<br>
+			<h3><strong>product_controller.dart</strong></h3>
+			<p>This class provides a controller that helps fetch a dynamic product list as a gridlist.</p>
+			<strong>Example:</strong>
+<xmp style="background-color: #fff2ac; font-size: 15px;">
+//......
+return GridView.builder(
+    padding: const EdgeInsets.only(top: 10, bottom: 10.0, right: 20),
+    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+    crossAxisCount: 2,
+    mainAxisSpacing: 5.0,
+    crossAxisSpacing: 5.0,
+    ),
+    itemCount: snapshot.data.length,
+......//
+</xmp>
+	
+
+			<br>
+			<h3><strong><li>Models <em>(models)</em></li></strong></h3>
+			<p>In this directory <mark><strong>ecommerce-ui-kit /lib/models/</strong></mark> you should find all models and Entities used in the App which you can link them with your backend (Firebase, PHP, JAVA, or other APIs). This directory has several files that are basic data models which help provide some flexible data model structures.</p>
+			<img src="assets/images/models.png" alt="HTML Structure" />
+
+
+			<br>
+			<h3><strong>order_model.dart</strong></h3>
+			<p>This model has a sample class with variables to form a model for an order fulfilment used for storing data components regarding an order. It is reusable and scalable.</p>
+			<strong>Example:</strong>
+<xmp style="background-color: #fff2ac; font-size: 15px;">
+//........
+class Order {
+  String stationID;
+  String userID;
+  String orderID;
+  List products;
+  String status;
+  String totalQuantity;
+  String totalPrice;
+  String deliveryFee;
+  String statusTag;
+  String stationName;
+  Timestamp timestamp;
+  String deliveryAddress;
+ 
+  Order() {
+    this.stationID = '';
+    this.userID = '';
+    this.orderID = '';
+    this.status = '';
+    this.deliveryFee = '';
+    this.totalQuantity = '';
+    this.totalPrice = '';
+}
+.....//
+</xmp>
+
+			<br>
+			<h3><strong><li>Provider <em>(provider)</em></li></strong></h3>
+			<p>This directory <mark><strong>ecommerce-ui-kit/lib/provider/</strong></mark> holds several subdirectories and files that have helper classes which fetch, push data from sources like firebase, firestore etc </p>
+			<img src="assets/images/provider.png" alt="HTML Structure" />
+			
+			<br>
+			<h3><strong><li>Screens <em>(screens)</em></li></strong></h3>
+			<p>These are the Screen available in <mark><strong>ecommerce-ui-kit/lib/screens</strong></mark>, ready to be used in your app. these includes login/signup, my cart, payment, product view and profile page etc..</p>
+			<img src="assets/images/screens.png" alt="HTML Structure" />
+
+			<br>
+			<h3><strong>login_screen.dart</strong></h3>
+			<p>This file provides a class which holds an impressive login ui. It has two tabs one for login and one for sign up</p>
+			<strong>Example:</strong>
+<xmp style="background-color: #fff2ac; font-size: 15px;">
+//.....
+debugShowCheckedModeBanner: false,
+ home: DefaultTabController(
+    length: 2,
+    child: Scaffold(
+        resizeToAvoidBottomPadding: false,
+        appBar: PreferredSize(
+            preferredSize: Size.fromHeight(60.0),
+            child: AppBar(
+                backgroundColor:Theme.of(context).primaryColor,
+                bottom: TabBar(
+                controller: _tabcontroller,
+                tabs: <Tab>[
+                new Tab(
+                    child: Padding(
+                        padding:EdgeInsets.only(bottom: 5.0),
+                        child: Text('Login',
+                           style: TextStyle(
+                             color: Colors.white,
+                             fontSize: 20.0,
+                             fontWeight: FontWeight.w800,
+                             fontFamily: 'Canterbury',
+                                           ),
+                                    ),
+                                   ),
+                        ),
+                new Tab(
+                    child: Padding(
+                        padding:EdgeInsets.only(bottom: 5.0),
+                        child: Text('Sign Up',
+                           style: TextStyle(..........
+
+</xmp>
+
+			<br>
+			<h3><strong><li>Widgets <em>(widgets)</em></li></strong></h3>
+			<p>This directory <mark><strong>ecommerce-ui-kit/lib/widgets/</strong></mark> holds files for some extra widget like components.</p>
+			<img src="assets/images/widgets.png" alt="HTML Structure" />
+			
+			<br>
+			<h3><strong>notifications.dart</strong></h3>
+			<p>This file has a class that helps having in app notifications. In the code snippet below the container has fields filled for a sample notification.</p>
+			<strong>Example:</strong>
+<xmp style="background-color: #fff2ac; font-size: 15px;">
+//…
+Container(
+    margin: EdgeInsets.all(10),
+    width: 60,
+    height: 60,
+    decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(10,),
+                  image: DecorationImage(
+                  image: AssetImage('asset/apple.png',),
+                  fit: BoxFit.cover)
+                  ),
+    ),
+    Padding(
+    padding: EdgeInsets.only(left: 20.0),
+    child: Text('Two kg apples for 250rs only\n-Arun merchants',
+          	style: TextStyle(
+//…
+</xmp>
+			<br>
+			<h3><strong><li>Additional Components</li></strong></h3>
+			<p>In the directory <mark><strong>ecommerce-ui-kit/asset/</strong></mark> there are sample image files and assets that are provided in the Ecommerce UI kit. These assets are only for demonstration purposes, Use your own assets in production.</p>
+			<img src="assets/images/othercomps.png" alt="HTML Structure" />
+			
+		</ol>
+		<hr>
+		
+		<h3 id="psdFiles"><strong>D) Build & Install the App</strong> - <a href="#toc">top</a></h3>
+		
+			<ol>
+				<li>After you make all your changes and customizations save the project.</li>
+				<li>Open Console, navigate to your project folder</li>
+				<li>Run <strong>flutter build apk --release</strong> you should get the apk file in the <strong>/output</strong> folder</li>
+				<li>Run <strong>flutter install</strong> to install your application on your connected device</li>
+			</ol>
+		
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Thriftysoft</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
